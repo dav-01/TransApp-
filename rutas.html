@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Blank Page - DWAdmin</title>
+
+	<!-- Bootstrap CSS-->
+	<link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.css">
+	<!-- Style CSS (White)-->
+	<link rel="stylesheet" href="assets/css/White.css">
+	<!-- Style CSS (Dark)-->
+	<link rel="stylesheet" href="assets/css/Dark.css">
+	<!-- FontAwesome CSS-->
+	<link rel="stylesheet" href="assets/vendors/fontawesome/css/all.css">
+	<!-- Icon LineAwesome CSS-->
+	<link rel="stylesheet" href="assets/vendors/lineawesome/css/line-awesome.min.css">
+
+</head>
+
+<body>
+
+	<!--Topbar -->
+	<div class="topbar transition">
+		<div class="bars">
+			<button type="button" class="btn transition" id="sidebar-toggle">
+				<i class="las la-bars"></i>
+			</button>
+		</div>
+		<div class="menu">
+
+			<ul>
+
+				<li>
+					<div class="theme-switch-wrapper">
+						<label class="theme-switch" for="checkbox">
+							<input type="checkbox" id="checkbox" title="Dark Or White" />
+							<div class="slider round"></div>
+						</label>
+					</div>
+				</li>
+
+				<li>
+					<div class="dropdown">
+						<div class="dropdown-toggle" id="dropdownProfile" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							<img src="assets/images/avatar/avatar-2.png" alt="Profile">
+						</div>
+						<div class="dropdown-menu" aria-labelledby="dropdownProfile">
+
+							<a class="dropdown-item" href="profile.html">
+								<i class="las la-user mr-2"></i> My Profile
+							</a>
+
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="signin.html">
+								<i class="las la-sign-out-alt mr-2"></i> Sign Out
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--Sidebar-->
+	<div class="sidebar transition overlay-scrollbars">
+		<div class="logo">
+			<h2 style="font-weight: 700;" class="mb-0">Trans<span style="font-weight: 500;">App</span></h2>
+		</div>
+
+		<div class="sidebar-items">
+			<div class="accordion" id="sidebar-items">
+				<ul>
+
+					<p class="menu">Dashboard</p>
+
+					<li>
+						<a href="index.html" class="items">
+							<i class="fa fa-tachometer-alt"></i>
+							<span>Indicadores</span>
+						</a>
+					</li>
+
+
+					<p class="menu">User Interface</p>
+
+
+
+					<li>
+						<a href="rutas.html" class="items">
+							<i class="lar la-meh-blank"></i>
+							<span>Rutas</span>
+						</a>
+					</li>
+
+
+
+					<p class="menu">Pages</p>
+
+					<li id="headingThree">
+						<a href="onclick();" class="submenu-items" data-toggle="collapse" data-target="#collapsefour"
+							aria-expanded="true" aria-controls="collapsefour">
+							<i class="fas la-folder"></i>
+							<span>Auth</span>
+							<i class="fas la-angle-right"></i>
+						</a>
+					</li>
+					<div id="collapsefour" class="collapse submenu" aria-labelledby="headingThree"
+						data-parent="#sidebar-items">
+						<ul>
+
+							<li>
+								<a href="signin.html">Login</a>
+							</li>
+
+							<li>
+								<a href="signup.html">Register</a>
+							</li>
+
+							<li>
+								<a href="forgot.html">Forgot Password</a>
+							</li>
+
+						</ul>
+					</div>
+
+
+
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="sidebar-overlay"></div>
+
+
+	<!--Content Start-->
+	<div class="content transition">
+		<div class="container-fluid dashboard">
+			<h3>Rutas</h3>
+
+
+			<div id="map">
+
+			</div>
+
+
+			<script async
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCReTBhVurI5Y6q_ETn2fQjw0DfJT2w_XM&callback=initMap">
+				</script>
+			<script>
+				let map;
+
+
+				function initMap() {
+					let barranquilla = { lat: 10.96854, lng: -74.78132 },
+						map = new google.maps.Map(document.getElementById("map"), {
+							center: barranquilla,
+							zoom: 12.3,
+						});
+				}
+
+				window.initMap = initMap;
+			</script>
+
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div class="footer transition">
+		<hr>
+		<p>
+			&copy; 2020 All Right Reserved by <a href="#" target="_blank">DWAdmin</a>
+		</p>
+	</div>
+
+	<!-- Loader -->
+	<div class="loader">
+		<div class="spinner-border text-light" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+	</div>
+
+	<div class="loader-overlay"></div>
+
+	<!-- Library Javascipt-->
+	<script src="assets/vendors/bootstrap/js/jquery.min.js"></script>
+	<script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendors/bootstrap/js/popper.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+
+</html>
