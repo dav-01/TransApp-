@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -76,14 +77,20 @@
 		<div class="sidebar-items">
 			<div class="accordion" id="sidebar-items">
 				<ul>
+
 					<p class="menu">Dashboard</p>
+
 					<li>
 						<a href="index.html" class="items">
 							<i class="fa fa-tachometer-alt"></i>
 							<span>Indicadores</span>
 						</a>
 					</li>
+
+
 					<p class="menu">User Interface</p>
+
+
 
 					<li>
 						<a href="rutas.html" class="items">
@@ -97,6 +104,8 @@
 							<span>PQRS</span>
 						</a>
 					</li>
+
+
 
 					<p class="menu">Pages</p>
 
@@ -140,31 +149,46 @@
 	<!--Content Start-->
 	<div class="content transition">
 		<div class="container-fluid dashboard">
-			<h3>Rutas</h3>
+			<h3>PQRS</h3>
+
+			<form class="row g-3">
+				<div class="col-md-6">
+				  <label for="inputEmail4" class="form-label">Nombre</label>
+				  <input type="text" class="form-control" id="inputEmail4">
+				</div>
+				<div class="col-md-6">
+				  <label for="inputPassword4" class="form-label">Apellido</label>
+				  <input type="text" class="form-control" id="inputPassword4">
+				</div>
+				<div class="col-12"><br>
+					<label for="inputAddress" class="form-label">Eres cliente de transmetro</label><br>
+					<select class="form-select" aria-label="Default select example">
+					  <option value="1">Si</option>
+					  <option value="2">No</option>
+					</select>
+				  </div>
+				<div class="col-12"><br>
+				  <label for="inputAddress" class="form-label">Tipo de PQR</label><br>
+				  <select class="form-select" aria-label="Default select example">
+					<option value="1">Peticion</option>
+					<option value="2">Queja</option>
+					<option value="3">Reclamo</option>
+				  </select>
+				</div>
+				<div class="col-12"><br>
+					<label for="inputAddress" class="form-label">¿Aprueba o desaprueba el servicio prestado por transmetro?</label><br>
+					<select class="form-select" aria-label="Default select example">
+					  <option value="1">Apruebo</option>
+					  <option value="2">Desapruebo</option>
+					</select>
+				  </div>
+				<div class="col-12">
+				  <center><button type="submit" class="btn btn-primary">Enviar Formulario</button></center>
+				</div>
+			  </form>
 
 
-			<div id="map">
-
-			</div>
-
-
-			<script async
-				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCReTBhVurI5Y6q_ETn2fQjw0DfJT2w_XM&callback=initMap">
-				</script>
-			<script>
-				let map;
-
-
-				function initMap() {
-					let barranquilla = { lat: 10.96854, lng: -74.78132 },
-						map = new google.maps.Map(document.getElementById("map"), {
-							center: barranquilla,
-							zoom: 12.3,
-						});
-				}
-
-				window.initMap = initMap;
-			</script>
+			  
 
 		</div>
 	</div>
@@ -173,7 +197,7 @@
 	<div class="footer transition">
 		<hr>
 		<p>
-			&copy; 2020 All Right Reserved by <a href="#" target="_blank">DWAdmin</a>
+			&copy; 2020 All Right Reserved by <a href="#" target="_blank">TransApp</a>
 		</p>
 	</div>
 

@@ -66,6 +66,19 @@
     padding: 0;
   }
 
+  input{
+	background-color: white !important;
+  }
+  h3{
+	text-align: center;
+  }
+
+.form-select{
+	height: 40px;
+	width: 100%;
+	border: none;
+}
+
 /** 2. Default CSS  **/
 body {
   color: var(--default-color);
